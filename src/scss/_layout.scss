@@ -1,0 +1,144 @@
+nav {
+  a {
+    color: $primary-color;
+  }
+}
+
+header {
+  height: $huge;
+  background-image: url("../../images/header.jpg");
+  background-size: cover;
+  text-align: center;
+  padding-top: 8rem;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: $tiny;
+  width: 18rem;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: $border-color;
+  border: $border-size solid $border-color;
+  border-radius: 5px;
+  margin-top: $tiny;
+  margin-bottom: $tiny;
+
+  img {
+    background-size: cover;
+    height: $large;
+    width: 85%;
+
+    margin: 1rem auto;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  aside,
+  article {
+    border: $border-size solid $border-color;
+    padding: $tiny;
+    margin: $tiny;
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  ul {
+    display: flex;
+    justify-content: center;
+    a {
+      color: white;
+      text-decoration: none;
+      padding-left: $small;
+    }
+  }
+}
+@media only screen and (min-width: $tablet) {
+  nav {
+    ul {
+      text-align: end;
+    }
+    
+  }
+  
+  .cards {
+    width: 90%;
+    /* border: 0.2rem solid rgb(206, 94, 94); */
+    display: flex;
+    margin: 0 auto;
+    padding-top: $tiny;
+
+    .card {
+      margin: $tiny;
+      display: flex;
+      flex-direction: row;
+
+      img {
+        float: left;
+        width: 15rem;
+        margin: $tiny;
+      }
+    }
+  }
+
+  main {
+    display: grid;
+    grid-template-rows: 1 1fr;
+    grid-template-columns: 15rem auto 15rem;
+
+    border: 0.2rem solid rgb(206, 94, 94);
+
+    aside {
+      border: $border-size solid $border-color;
+      padding: $tiny;
+      
+    }
+    
+  }
+}
+
+@media only screen and (min-width: $desktop) {
+  .cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    padding-top: $tiny;
+    border: 0.2rem solid rgb(206, 94, 94);
+
+    .card {
+      width: 47%;
+     
+      display: flex;
+      flex-direction: row;
+
+      img {
+        float: left;
+        width: 15rem;
+        margin: $tiny;
+      }
+    }
+  }
+
+  main {
+    display: grid;
+    grid-template-rows: 1 1fr;
+    grid-template-columns: auto 36rem auto;
+
+    border: 0.2rem solid rgb(206, 94, 94);
+
+    aside {
+      border: $border-size solid $border-color;
+      padding: $tiny;
+    }
+  }
+}
